@@ -45,9 +45,8 @@ h3.ant-typography {
 
   background: $header-color !important;
 
-  border-bottom: 1px solid $primary-light-color !important;
-
   color: black !important;
+  font-weight: 700;
 
   & > .ant-col {
     @extend %flex-row;
@@ -116,7 +115,7 @@ h3.ant-typography {
   }
 
   &-arrow {
-    top: 70%!important;
+    top: 70% !important;
   }
 
   &-dropdown {
@@ -332,4 +331,57 @@ h3.ant-typography {
       width: 100% !important;
     }
   }
+}
+
+.offers {
+  & > .ant-space > .ant-space-item:last-child {
+    width: 100%;
+  }
+}
+
+.ant-card.offer {
+  cursor: initial;
+
+  .ant-card-body {
+    //padding: 0 !important;
+  }
+}
+
+.offer {
+  &--active {
+    border: 1px solid $active-color;
+  }
+
+  &__content {
+    @extend %flex-row;
+    gap: $fs-xxlarge;
+  }
+
+  &__desc {
+    @extend %flex-column;
+    gap: $fs-xxsmall;
+  }
+
+  img {
+    width: $fs-xxlarge * 2.5;
+    height: $fs-xxlarge * 2.5;
+  }
+}
+
+.isBeneficial {
+  width: fit-content;
+  margin-top: $fs-small;
+  padding: 0.5rem 2rem;
+
+  background: $active-color;
+
+  border-radius: 10rem;
+
+  color: $background-light-color;
+}
+
+.search-item {
+    @extend %flex-row;
+    justify-content: space-between;
+    align-items: center;
 }

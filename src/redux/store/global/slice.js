@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import {
   getAllCategories,
   getCategoryShops,
+  getOffers,
   searchShops,
 } from "./thunks.js";
 
@@ -10,6 +11,7 @@ const initialState = {
   currentCategory: null,
   currentCategoryShops: [],
   currentShop: null,
+  currentOffers: [],
   searchItems: [],
   isFetching: false,
   error: null,
@@ -40,6 +42,10 @@ const slice = createSlice({
       .addCase(getCategoryShops.fulfilled, (state, action) => {
         state.currentCategoryShops = action.payload;
         console.log(state.currentCategoryShops);
+      })
+      .addCase(getOffers.fulfilled, (state, action) => {
+        state.currentOffers = action.payload;
+        console.log(state.currentOffers);
       })
       .addCase(searchShops.fulfilled, (state, action) => {
         state.searchItems = action.payload;

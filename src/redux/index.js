@@ -17,4 +17,5 @@ export {
   getAllCategories,
   searchShops,
   getCategoryShops,
+  getOffers,
 } from "./store/global/thunks.js";

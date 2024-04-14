@@ -25,9 +25,7 @@ function Module({
         align="start"
         direction="vertical"
       >
-        <Title
-          level={3}
-        >
+        <Title level={3}>
           Магазины
         </Title>
         <List data={currentCategoryShops} />

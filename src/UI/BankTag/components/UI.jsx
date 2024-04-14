@@ -8,7 +8,7 @@ function UI({
   isBeneficial,
 }) {
   const image = <img
-    src={`/img/${icon.toLowerCase()}.png`}
+    src={`/img/${icon}.png`}
     alt="bank icon"
   />;
   const styles = {

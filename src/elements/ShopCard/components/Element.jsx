@@ -40,23 +40,23 @@ function Element({
         <Text>
           График работы: 10<sup>00</sup>-22<sup>00</sup>
         </Text>
-        <List
-          offers={[
-            {
-              "bank_name": "Kaspi",
-              "percent": 5,
-              "isBeneficial": false,
-            }, {
-              "bank_name": "Halyk",
-              "percent": 15,
-              "isBeneficial": true,
-            }, {
-              "bank_name": "Jusan",
-              "percent": 10,
-              "isBeneficial": false,
-            },
-          ]}
-        />
+        {/*<List*/}
+        {/*  offers={[*/}
+        {/*    {*/}
+        {/*      "bank_name": "Kaspi",*/}
+        {/*      "percent": 5,*/}
+        {/*      "isBeneficial": false,*/}
+        {/*    }, {*/}
+        {/*      "bank_name": "Halyk",*/}
+        {/*      "percent": 15,*/}
+        {/*      "isBeneficial": true,*/}
+        {/*    }, {*/}
+        {/*      "bank_name": "Jusan",*/}
+        {/*      "percent": 10,*/}
+        {/*      "isBeneficial": false,*/}
+        {/*    },*/}
+        {/*  ]}*/}
+        {/*/>*/}
       </Space>
     </Card>
   );
