@@ -1,17 +1,24 @@
 import React from "react";
-import { Layout } from "antd";
+import {
+  Button,
+  Layout,
+  Space,
+  Typography,
+} from "antd";
 
-const { Content } = Layout;
+const { Content, Header } = Layout;
+const { Text } = Typography;
+
 function Design(Page) {
-  const pageStyle = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  }
-
   return (
-    <Layout style={pageStyle}>
-      <Content style={pageStyle}>
+    <Layout>
+      <Header>
+        <Text>#HackNU24</Text>
+        <Space>
+          <Text>404: Team not found</Text>
+        </Space>
+      </Header>
+      <Content>
         <Page />
       </Content>
     </Layout>

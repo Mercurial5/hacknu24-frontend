@@ -1,11 +1,13 @@
 import React from "react";
 import { PublicLayout } from "../design/Public/index.js";
+import { GreetingModule } from "../modules/Greeting/index.js";
+import { CategoriesListModule } from "../modules/CategoriesList/index.js";
 
 function MainPage() {
   return (
     <>
-      asdads
-      {/*<TestModule />*/}
+      <GreetingModule />
+      <CategoriesListModule />
     </>
   );
 }

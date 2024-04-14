@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
+import { ConfigProvider } from "antd";
 
 import {
   store,
@@ -16,9 +17,27 @@ function App() {
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <BrowserRouter>
-          <div className="app">
-            <Router />
-          </div>
+          <ConfigProvider
+            theme={{
+              components: {
+                // Name of the component
+                Button: {
+                  fontFamily: "InterSemiBold",
+                },
+                Typography: {
+                  fontSize: 16,
+                },
+              },
+              token: {
+                fontFamily: "InterRegular",
+
+              },
+            }}
+          >
+            <div className="app">
+              <Router />
+            </div>
+          </ConfigProvider>
         </BrowserRouter>
       </PersistGate>
     </Provider>

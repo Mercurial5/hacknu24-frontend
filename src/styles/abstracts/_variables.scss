@@ -1,0 +1,89 @@
+/**
+* @desc         set up variables.
+* @requires     none
+*/
+
+// [color - variables]
+// branding
+$primary-dark-color: #0055FF;
+$primary-light-color: #697385;
+$secondary-dark-color: #1A202BD9;
+$secondary-light-color: #3C414B;
+$background-light-color: #FFFFFF;
+$background-dark-color: #F9F9F9;
+$active-color: #59A001;
+
+// table colors
+$table-header-color: $secondary-light-color;
+$table-cell-color: $secondary-light-color;
+
+// header colors
+$header-color: $background-light-color;
+
+// aside colors
+$aside-color: rgba($secondary-light-color, 0.8);
+
+// placeholder colors
+$placeholder-color: rgba($primary-light-color, 0.6);
+
+// button colors
+$greeting-button-color: rgba($primary-dark-color, 0.8);
+$greeting-button-hover-color: $primary-dark-color;
+$greeting-button-shadow: 4px 4px 20px $primary-dark-color;
+
+// font size
+$fs-xxsmall: 1rem;
+$fs-xsmall: 1.2rem;
+$fs-small: 1.4rem;
+$fs-regular: 1.6rem; // -> base size
+$fs-medium: 2rem;
+$fs-large: 2.4rem;
+$fs-xlarge: 2.8rem;
+$fs-xxlarge: 3.2rem;
+
+// width
+$extreme-content-width: 85rem;
+
+// webkit
+$webkit-bg: rgba($primary-dark-color, .8);
+
+// font family
+$ff-semibold: "InterSemiBold", sans-serif;
+$ff-medium: "InterMedium", sans-serif;
+$ff-regular: "InterRegular", sans-serif;
+$ff-code: Consolas, Monaco, "Lucida Console", monospace;
+
+// font weights
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+
+// inline hights
+$base-line-height: normal;
+
+// [action - variables]
+// hover
+$primary-hover-color-1: rgba($primary-dark-color, 0.2);
+$primary-hover-color-2: rgba($primary-dark-color, 0.4);
+$primary-hover-color-3: rgba($primary-dark-color, 0.6);
+
+// [breakpoints - variables]
+$xxl: 1400px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 540px;
+$xs: 360px;
+
+// [shadow - variables]
+// shadows
+$box-shadow-light: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.06);
+$box-shadow-medium: 0 8px 11px rgba(0, 0, 0, 0.1), 0 9px 12px rgba(0, 0, 0, 0.2);
+
+$text-shadow-light: $secondary-dark-color 1px 1px 5px;
+
+// [border-radius - variable]
+$element-border-radius: $fs-regular;
+$button-border-radius: $fs-xsmall;
+$collapse-border-radius: 0.5rem;

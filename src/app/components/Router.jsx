@@ -11,24 +11,13 @@ import {
   privateRoutes,
   publicRoutes,
 } from "../routes";
-function Router({
-  // store props
-  isAuth,
-  // dispatch props
-}) {
-  const defaultRoute = isAuth ? "/users" : "/";
+function Router() {
+  const defaultRoute = "/";
 
-  console.log("isAuth", isAuth);
 
   return (
     <Routes>
-      {!isAuth && publicRoutes.map((route) =>
-        <Route
-          key={route.path}
-          {...route}
-        />,
-      )}
-      {isAuth && privateRoutes.map((route) =>
+      {publicRoutes.map((route) =>
         <Route
           key={route.path}
           {...route}
@@ -47,19 +36,6 @@ function Router({
   );
 }
 
-const mapStateToProps = (state) => ({
-  isAuth: state.auth.isAuth,
-});
-const mapDispatchToProps = () => ({
-  // checkAuth: () => dispatch(checkAuth()),
-  // userLogout: () => dispatch(userLogout()),
-});
 
-Router.propTypes = {
-  isAuth: PropTypes.bool.isRequired,
-};
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Router);
+export default Router;

@@ -7,24 +7,14 @@ export {
   persistor,
 } from "./store";
 
-// auth
-export { userLogout } from "./store/auth/slice";
+// global
 export {
-  userLogin,
-  userRegister,
-  checkAuth,
-} from "./store/auth/thunks";
-
-// profile
-export { clearTestResults } from "./store/profile/slice.js";
+  setCurrentCategory,
+  clearSearchItems,
+  setCurrentShop,
+} from "./store/global/slice.js";
 export {
-  getProfile,
-  sendTestAnswers,
-} from "./store/profile/thunks";
-
-// test
-export {
-  selectAnswer,
-  nextQuestion,
-  restart,
-} from "./store/test/slice";
+  getAllCategories,
+  searchShops,
+  getCategoryShops,
+} from "./store/global/thunks.js";

@@ -8,14 +8,10 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-import authSlice from "./auth/slice.js";
-import profileSlice from "./profile/slice.js";
-import testSlice from "./test/slice.js";
+import globalSlice from "./global/slice.js";
 
 const rootReducer = combineReducers({
-  auth: authSlice,
-  profile: profileSlice,
-  test: testSlice,
+  global: globalSlice,
 });
 
 const persistConfig = {

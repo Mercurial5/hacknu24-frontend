@@ -1,1 +1,1 @@
-export { default as SomeElement } from "./components/Element";
+export { default as SomeElement } from "./components/Element.jsx";

@@ -1,0 +1,32 @@
+/**
+* @desc         app styles
+* @requires     variables, placeholders
+*/
+
+:root {
+  font-size: 62.5%; /* (62.5/100) * 16px = 10px */
+}
+
+html {
+  @extend %webkit-scrollbar;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: $background-light-color;
+
+  font-family: $ff-regular !important;
+}
+
+.app {
+  //padding: $fs-regular;
+}
+
+.app {
+  padding: $fs-xxsmall $fs-medium * 2;
+  //@extend %absolute-center;
+  @extend %flex-column;
+  gap: $fs-xlarge;
+}

@@ -1,0 +1,335 @@
+/**
+* @desc         override styles for antd custom
+* @requires     variables, placeholders
+*/
+
+// typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}
+
+h2.ant-typography,
+h3.ant-typography {
+  color: $secondary-light-color !important;
+
+  font-family: $ff-semibold !important;
+}
+
+// elements
+.ant-row {
+  width: 100%;
+}
+
+// layout
+.ant-layout {
+  @extend %flex-column;
+  gap: $fs-medium * 4;
+
+  background: $header-color !important;
+
+  font-family: $ff-regular !important;
+}
+
+.ant-layout-header {
+  @extend %flex-row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+
+  width: 100%;
+
+  background: $header-color !important;
+
+  border-bottom: 1px solid $primary-light-color !important;
+
+  color: black !important;
+
+  & > .ant-col {
+    @extend %flex-row;
+    @extend %flex-center;
+    height: 100%;
+  }
+}
+
+.ant-layout-content {
+  @extend %flex-column;
+  gap: $fs-xxlarge * 2 !important;
+}
+
+// buttons
+.ant-btn {
+  height: auto;
+}
+
+// inputs
+.ant-input {
+  width: 100% !important;
+
+  font-size: $fs-regular !important;
+
+  &-prefix {
+    margin-inline-end: $fs-regular !important;
+  }
+
+  &-affix-wrapper {
+    padding: $fs-small $fs-xxlarge !important;
+  }
+
+  &-number {
+    width: 100%;
+  }
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
+}
+
+// menu
+.ant-menu {
+  @extend %flex-center;
+
+  background: transparent !important;
+
+  &-item {
+    font-weight: $fw-semi-bold;
+    color: $primary-light-color;
+
+    &:hover {
+      color: $primary-dark-color !important;
+    }
+  }
+}
+
+// select
+.ant-select {
+  width: $extreme-content-width !important;
+
+  color: $secondary-dark-color !important;
+
+  &-selector {
+    padding: $fs-medium $fs-large !important;
+  }
+
+  &-arrow {
+    top: 70%!important;
+  }
+
+  &-dropdown {
+    background: $background-light-color !important;
+  }
+
+  &-item-option {
+    &:hover {
+      background: $background-dark-color !important;
+    }
+  }
+}
+
+// spin
+.ant-spin {
+  &-dot-item {
+    background: $primary-light-color !important;
+  }
+
+  &-text {
+    font-size: $fs-medium;
+    color: $primary-light-color;
+  }
+}
+
+// tooltip
+.ant-tooltip {
+  &-arrow {
+    border-color: $secondary-dark-color !important;
+  }
+
+  &-inner {
+    background: $primary-dark-color !important;
+    color: $primary-light-color !important;
+  }
+}
+
+// list
+.ant-list-item {
+  border-block-end: none !important;
+
+  &-meta {
+    &-description {
+      color: $primary-light-color !important;
+    }
+
+    &-content {
+      @extend %flex-column;
+      gap: $fs-regular
+    }
+  }
+}
+
+// form
+.ant-form-item-control-input-content {
+  //@extend %flex-row;
+  //@extend %flex-center;
+  //gap: $fs-xxsmall;
+}
+
+// space
+.ant-space {
+  @extend %flex-row;
+  justify-content: center !important;
+
+  // collapse inside space in all applications
+  .accordion {
+    width: 100vw !important;
+  }
+}
+
+// collapse
+.ant-collapse {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $fs-xsmall;
+  @include media-lg {
+    grid-template-columns: 1fr;
+  }
+
+  margin-top: $fs-large;
+
+  background: transparent !important;
+
+  &-header, &-content {
+    color: $primary-light-color !important;
+
+    border-radius: $element-border-radius !important;
+  }
+
+  &-header {
+    flex-direction: row-reverse;
+    align-items: center !important;
+
+    padding: $fs-regular $fs-small !important;
+
+    background: $table-header-color;
+
+    font-size: $fs-regular;
+    //font-family: $ff-bold;
+  }
+
+  &-content {
+    margin-top: $fs-xsmall;
+
+    background: $table-cell-color !important;
+
+    font-size: $fs-small !important;
+
+    &-box > .ant-row > .ant-col {
+      font-size: $fs-regular !important;
+    }
+  }
+
+  &-item {
+    margin: 0 !important;
+  }
+}
+
+// modal
+.ant-modal {
+  &-body,
+  &-header,
+  &-title,
+  &-content,
+  &-close-x {
+    background-color: transparent !important;
+  }
+
+  &-header, &-close-x, &-footer {
+    display: none !important;
+  }
+
+  &-content {
+    backdrop-filter: blur(10px);
+  }
+}
+
+// card
+.ant-card {
+  cursor: pointer;
+  background-color: $background-dark-color !important;
+  //padding: 0 !important;
+
+  &-body {
+    padding: $fs-xxlarge !important;
+
+    & > .ant-space-item {
+      & > .ant-typography:first-child {
+        font-size: $fs-regular !important;
+        font-family: $ff-semibold !important;
+      }
+
+      & > .ant-typography:last-child {
+        font-size: $fs-small !important;
+      }
+    }
+  }
+}
+
+// tag
+.ant-tag {
+  @extend %flex-row;
+  align-items: center;
+  gap: $fs-xxsmall * 0.5;
+
+  width: fit-content !important;
+  padding: $fs-xxsmall * 0.7 $fs-xsmall $fs-xxsmall * 0.7 $fs-xxsmall * 0.7 !important;
+
+  background-color: $background-light-color !important;
+
+  border-radius: 3rem !important;
+
+  font-family: $ff-semibold !important;
+  font-size: $fs-small !important;
+  color: $secondary-dark-color !important;
+
+  & > img {
+    width: $fs-large;
+    height: $fs-large;
+  }
+}
+
+// greeting module
+.greeting {
+  & > h3.ant-typography {
+    font-family: $ff-regular !important;
+    font-weight: 400 !important;
+  }
+}
+
+.greeting,
+.categories {
+  & > .ant-space {
+    & > .ant-space-item {
+      width: $extreme-content-width !important;
+
+      & > h2.ant-typography,
+      & > h3.ant-typography {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.shops {
+  & > .ant-space {
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+
+    & > .ant-space-item {
+      width: 100% !important;
+    }
+  }
+}
