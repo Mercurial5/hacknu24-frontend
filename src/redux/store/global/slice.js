@@ -50,6 +50,7 @@ const slice = createSlice({
       .addCase(searchShops.fulfilled, (state, action) => {
         state.searchItems = action.payload;
         console.log("state.searchItems", state.searchItems);
+
       })
       .addMatcher(
         (action) => action.type.endsWith("/pending"),

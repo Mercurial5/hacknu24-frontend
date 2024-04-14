@@ -8,7 +8,10 @@ import {
   Typography,
 } from "antd";
 import { connect } from "react-redux";
-import { searchShops } from "../index.js";
+import {
+  clearSearchItems,
+  searchShops,
+} from "../index.js";
 import SearchItem from "./SearchItem.jsx";
 
 const { Title } = Typography;
@@ -18,11 +21,16 @@ function Module({
   searchItems,
   // dispatch props
   searchShops,
+  clearSearchItems,
 }) {
   const [input, setInput] = useState("");
 
   useEffect(() => {
     searchShops(input);
+  }, [input]);
+
+  useEffect(() => {
+    clearSearchItems();
   }, [input]);
 
   const handleChange = (value) => {
@@ -35,7 +43,7 @@ function Module({
     color: "#3C414B",
   };
 
-  console.log("searchItems", searchItems);
+  console.log("searchItems", JSON.stringify(searchItems));
   return (
     <section className="greeting">
       <Space
@@ -82,6 +90,7 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = (dispatch) => ({
   searchShops: (query) => dispatch(searchShops(query)),
+  clearSearchItems: (state) => dispatch(clearSearchItems(state)),
 });
 
 Module.propTypes = {};
